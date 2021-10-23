@@ -11,7 +11,7 @@ const start = () => {
     client = new Elarian({
         appId: process.env.APP_ID,
         orgId: process.env.ORG_ID,
-        apiKey:process.env.APP_KEY
+        apiKey:process.env.API_KEY
     })
     client
         .on('error', (error) => {
@@ -27,12 +27,16 @@ const start = () => {
             })
 
             const resp = customer.sendMessage(
-                {channel:'whatsapp', number:'2222'},
-            )
-            {
-                body: {
-                    text:'dmsndsmdn'
+                {channel:'sms', number:'2222'},
+                {
+                    body: {
+                        text:'elarian'
+                    }
                 }
-            }
+            )
         })
+        .connect()
+    
 }
+
+start()

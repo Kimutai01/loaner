@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "elarian": "^0.2.16"
+    "dotenv": "^10.0.0",
+    "elarian": "^0.2.16",
+    "signale": "^1.4.0"
   }
 }
